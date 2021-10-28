@@ -1,4 +1,4 @@
-﻿using AutoCenterV1.DTO;
+﻿using AutoCenterV1.Entities;
 using AutoCenterV1.Interface;
 
 namespace AutoCenterV1.Repositories

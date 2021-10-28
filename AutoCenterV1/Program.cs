@@ -1,4 +1,4 @@
-﻿using AutoCenterV1.DTO;
+﻿using AutoCenterV1.Interface;
 using AutoCenterV1.Repositories;
 
 namespace AutoCenterV1
@@ -8,8 +8,9 @@ namespace AutoCenterV1
         static void Main(string[] args)
         {
             using MyDbContext ctx = new();
-            ctx.Database.EnsureCreated();
-            ICarRepository repo = new CarRepository(ctx);
+            IUnitOfWork unitOfWork = new UnitOfWork(ctx);
+            var cars = unitOfWork.Cars.GetAll();
+            //ctx.Database.EnsureCreated();
         }
     }
 }

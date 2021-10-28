@@ -1,4 +1,4 @@
-﻿using AutoCenterV1.DTO;
+﻿using AutoCenterV1.Entities;
 using AutoCenterV1.Interface;
 using System;
 using System.Collections.Generic;
@@ -6,11 +6,7 @@ using System.Linq;
 
 namespace AutoCenterV1.Repositories
 {
-    abstract class BaseRepository<TEntity, TKey>
-        : IEntityCreator<TEntity, TKey>,
-          IEntityReader<TEntity, TKey>,
-          IEntityRemover<TEntity, TKey>,
-          IEntityUpdater<TEntity, TKey> where TEntity : BaseEntity<TKey>
+    abstract class BaseRepository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : BaseEntity<TKey>
     {
         protected readonly MyDbContext _mydbContext;
 
@@ -45,7 +41,7 @@ namespace AutoCenterV1.Repositories
             _mydbContext.Remove(entity);
         }
 
-        public void Remove(TKey id)
+        virtual public void Remove(TKey id)
         {
             Remove(Get(id));
         }

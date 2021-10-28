@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AutoCenterV1.DTO
+namespace AutoCenterV1.Entities
 {
     public class Category : BaseEntity<int>
     {

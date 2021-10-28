@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoCenterV1.DTO
+namespace AutoCenterV1.Entities
 {
     public class Customer : BaseEntity<int>
     {       

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AutoCenterV1.DTO
+namespace AutoCenterV1.Entities
 {
     public class BaseEntity<TKey>
     {
