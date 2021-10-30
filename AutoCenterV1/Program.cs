@@ -8,7 +8,7 @@ namespace AutoCenterV1
         static void Main(string[] args)
         {
             using MyDbContext ctx = new();
-            IUnitOfWork unitOfWork = new UnitOfWork(ctx);
+            IUnitOfWork unitOfWork = new UnitOfWork();
             var cars = unitOfWork.Cars.GetAll();
             //ctx.Database.EnsureCreated();
         }
